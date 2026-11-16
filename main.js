@@ -157,6 +157,7 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
 }
 const menuButton = document.querySelector('.menu-button');
 const menu = document.getElementById('primary-nav');
+const isEnglish = document.documentElement.lang === 'en';
 const megaMenu = document.createElement('nav');
 megaMenu.className = 'mega-menu';
 megaMenu.id = 'mega-menu';
@@ -169,6 +170,21 @@ megaMenu.innerHTML = `
     <div class="mega-group"><a class="mega-heading" href="pain.html">통증·움직임 클리닉</a><a href="pain.html#conditions">척추·관절</a><a href="pain.html#sports-title">운동 손상</a><a href="pain.html#accident-title">교통사고 이후 통증</a></div>
     <div class="mega-group"><a class="mega-heading" href="herbal.html">맥진·한약 클리닉</a><a href="herbal.html#personal-herbs-title">개별화 한약</a><a href="herbal.html#antler-title">녹용한약</a><a href="herbal.html#gongjindan-title">공진단</a></div>
   </div>`;
+if (isEnglish) {
+  const englishLabels = [
+    ['Jeil Clinic', 'Our Story', 'Our Doctors', 'Directions'],
+    ['Aesthetics Clinic', 'Thread Lifting', 'Facial Acupuncture', 'Skin Boosters', 'Body Contouring', 'Inner Beauty'],
+    ['Pain & Mobility', 'Spine & Joints', 'Sports Injuries', 'After an Accident'],
+    ['Herbal Medicine', 'Personalized Herbs', 'Deer Antler Medicine', 'Gongjindan']
+  ];
+  megaMenu.setAttribute('aria-label', 'All navigation');
+  megaMenu.querySelectorAll('.mega-group').forEach((group, i) => {
+    group.querySelectorAll('a').forEach((link, j) => {
+      link.textContent = englishLabels[i][j];
+      link.setAttribute('href', `en/${link.getAttribute('href')}`);
+    });
+  });
+}
 header.append(megaMenu);
 menuButton.setAttribute('aria-controls', 'mega-menu');
 megaMenu.querySelectorAll('.mega-group').forEach(group => {
@@ -217,7 +233,7 @@ function setMenuOpen(isOpen, mode = 'click', hoverIndex = -1) {
   header.classList.toggle('menu-hover', isOpen && mode === 'hover');
   megaMenu.hidden = !isOpen;
   menuButton.setAttribute('aria-expanded', String(isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+  menuButton.setAttribute('aria-label', isEnglish ? (isOpen ? 'Close menu' : 'Open menu') : (isOpen ? '메뉴 닫기' : '메뉴 열기'));
 }
 menuButton.addEventListener('click', () => setMenuOpen(menuMode !== 'click'));
 const hoverMenuMedia = window.matchMedia('(min-width: 1051px) and (hover: hover)');
@@ -335,7 +351,7 @@ if (heroCarousel) {
   const slides = [...track.querySelectorAll('.hero-slide')];
   const status = heroCarousel.querySelector('.hero-slide-status');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const labels = ['한방 미용 클리닉', '통증·움직임 클리닉', '맥진·한약 클리닉'];
+  const labels = isEnglish ? ['Aesthetics Clinic', 'Pain & Mobility Clinic', 'Herbal Medicine Clinic'] : ['한방 미용 클리닉', '통증·움직임 클리닉', '맥진·한약 클리닉'];
 
   const cloneSlide = slide => {
     const clone = slide.cloneNode(true);

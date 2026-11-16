@@ -1,0 +1,27 @@
+.site-header .language { position: relative; cursor: pointer; }
+.site-header .language summary { list-style: none; white-space: nowrap; }
+.site-header .language summary::-webkit-details-marker { display: none; }
+.site-header .language summary::after { content: '⌄'; margin-left: 6px; font-size: .8em; }
+.site-header .language-options { position: absolute; top: calc(100% + 12px); right: 0; min-width: 110px; padding: 8px 0; background: #262d3c; box-shadow: 0 6px 18px #0003; }
+.site-header .language-options a { display: block; padding: 8px 14px; color: #fff; font-size: 14px; line-height: 1.2; text-decoration: none; }
+.site-header .language-options a:hover, .site-header .language-options a:focus-visible { background: #424c61; }
+@media (max-width: 650px) { .site-header .language { display: block; font-size: 13px; } .site-header .header-tools { gap: 12px; } }
+@media (min-width: 1051px) {
+  html[lang="en"] .site-header .primary-nav { gap: clamp(14px, 2vw, 32px); }
+  html[lang="en"] .site-header .primary-nav a { font-size: 14px; letter-spacing: -.02em; }
+  html[lang="en"] .site-header .header-tools { margin-left: 35px; }
+  html[lang="en"] .mega-group a { font-size: 14px; }
+  html[lang="en"] .hero-carousel .hero-copy h1 { font-size: clamp(28px, 2.1vw, 40px); line-height: 1.25; }
+  html[lang="en"] .hero-carousel .hero-copy p { font-size: clamp(19px, 1.55vw, 28px); }
+  html[lang="en"] .hero-carousel .clinic-links strong { font-size: clamp(20px, 2vw, 34px); line-height: 1.15; white-space: normal; }
+}
+@media (max-width: 1050px) {
+  html[lang="en"] .hero-carousel .clinic-links strong { font-size: clamp(15px, 2vw, 22px); white-space: normal; }
+}
+@media (max-width: 650px) {
+  html[lang="en"] .hero-carousel .hero-copy h1,
+  html[lang="en"] .hero-carousel .hero-copy h2 { font-size: 21px; line-height: 1.3; }
+  html[lang="en"] .hero-carousel .hero-copy p { font-size: 15px; }
+  html[lang="en"] .hero-carousel .clinic-links strong { font-size: 16px; }
+  html[lang="en"] .herbal-more { max-width: 100%; white-space: normal; }
+}
