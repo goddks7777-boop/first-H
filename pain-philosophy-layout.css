@@ -1,0 +1,53 @@
+.after-accident::before { content: none; }
+
+.pain-philosophy {
+  position: relative;
+  background: linear-gradient(180deg, #262d3c 0%, #424c61 100%);
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+}
+
+.pain-philosophy::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: min(50.42vw, 968px);
+  aspect-ratio: 1;
+  top: max(-25.21vw, -484px);
+  left: .31%;
+  background: url('assets/pain/after-accident-ring.png') center / contain no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.pain-philosophy-grid { position: relative; z-index: 1; }
+.pain-philosophy .eyebrow, .pain-philosophy h2 { color: #fff; }
+.pain-philosophy h3 { color: #d2ccbf; font-weight: 600; }
+.pain-philosophy-grid > div:first-child > p:last-child {
+  color: #fff;
+  font-weight: 500;
+  word-break: keep-all;
+}
+.philosophy-visual > div p { color: #d2ccbf; font-weight: 500; word-break: keep-all; }
+.philosophy-visual > img, .philosophy-visual > div img { object-fit: cover; }
+
+@media (min-width: 1451px) {
+  .pain-philosophy { min-height: 1128px; padding: 200px 0; }
+  .pain-philosophy-grid { grid-template-columns: 469px minmax(0, 833px); gap: 138px; }
+  .pain-philosophy .eyebrow { margin-bottom: 14px; font-size: 14px; line-height: 14px; letter-spacing: .3em; }
+  .pain-philosophy h2 { margin-bottom: 180px; white-space: nowrap; }
+  .pain-philosophy h3 { margin: 0 0 40px; font-size: 40px; line-height: 40px; }
+  .pain-philosophy-grid > div:first-child > p:last-child { font-size: 26px; line-height: 36px; }
+  .philosophy-visual > img { width: 485px; height: 328px; margin-left: auto; border-radius: 0 0 100px 0; }
+  .philosophy-visual > div { grid-template-columns: 348px 1fr; gap: 43px; align-items: start; margin: 0; }
+  .philosophy-visual > div img { width: 348px; height: 400px; border-radius: 100px 0 0 0; }
+  .philosophy-visual > div p { max-width: 404px; margin: 41px 0 0; font-size: 26px; line-height: 36px; }
+}
+
+@media (max-width: 1050px) {
+  .pain-philosophy::before { width: min(65vw, 640px); top: max(-32.5vw, -320px); }
+}
+@media (max-width: 650px) {
+  .pain-philosophy::before { width: 76vw; top: -38vw; }
+  .pain-philosophy-grid > div:first-child > p:last-child,
+  .philosophy-visual > div p { line-height: 1.55; }
+}

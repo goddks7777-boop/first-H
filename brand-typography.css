@@ -1,0 +1,59 @@
+/* Typography from the supplied brand and medical team design. */
+.brand-hero, .brand-history, .doctor, .brand-visit, .brand-visit + .closing, .site-footer {
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+}
+.brand-history .eyebrow, .doctor .eyebrow { font-family: 'Cormorant SC', Georgia, serif; font-weight: 600; }
+.brand-visit-details ul li { position: relative; padding-left: 16px; }
+.brand-visit-details ul li::before { content: '*'; position: absolute; left: 0; }
+.brand-visit-details .spaced-day { letter-spacing: .35em; white-space: nowrap; }
+.brand-large-type-track { display: flex; width: max-content; animation: brand-type-scroll 35s linear infinite; }
+.brand-large-type-track span { flex: none; padding-right: .5em; }
+.doctor .doctor-bio-shell { position: relative; }
+.doctor .doctor-bio-rail { display: none; }
+.doctor .doctor-bio:focus-visible { outline: 2px solid #d2ccbf; outline-offset: 5px; }
+@media (min-width: 1051px) {
+  .doctor .doctor-bio { height: 447px; max-height: min(447px, calc(100vh - 390px)); overflow-y: auto; border-left: 0; scrollbar-width: none; overscroll-behavior: auto; }
+  .doctor .doctor-bio::-webkit-scrollbar { display: none; }
+  .doctor .doctor-bio-rail { display: block; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #fff; pointer-events: none; }
+  .doctor .doctor-bio-rail span { position: absolute; inset: 0 0 auto; height: 36%; background: #d2ccbf; transform: translateY(var(--bio-thumb-y, 0px)); }
+  .doctor .doctor-bio > div:last-child { margin-bottom: 0; }
+  .doctor-primary .doctor-tags { max-width: 358px; gap: 10px; }
+  .doctor-honorary .doctor-tags { max-width: 437px; gap: 10px; }
+  .doctor .doctor-tags li { padding: 4px 10px; border-width: .7px; }
+}
+@keyframes brand-type-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .brand-large-type-track { animation: none; } }
+
+@media (min-width: 1451px) {
+  .brand-hero h1 { font-size: 40px; line-height: 48px; font-weight: 700; }
+  .brand-hero-copy p { font-size: 30px; line-height: 36px; font-weight: 500; }
+  .brand-history-heading .eyebrow { font-size: 14px; line-height: 14px; letter-spacing: .3em; }
+  .brand-story-copy h3 { font-size: 40px; line-height: 40px; font-weight: 600; letter-spacing: normal; margin-bottom: 40px; }
+  .brand-story-copy:nth-child(5) h3 { line-height: 50px; }
+  .brand-story-copy p { font-size: 26px; line-height: 36px; font-weight: 500; }
+  .doctor-content .eyebrow { font-size: 14px; line-height: 14px; letter-spacing: .3em; margin-bottom: 14px; }
+  .doctor-content h2 { font-size: 50px; line-height: 50px; font-weight: 700; letter-spacing: normal; margin: 0 0 84px; }
+  .doctor-name { font-size: 30px; line-height: 30px; font-weight: 700; margin: 0 0 60px 64px; }
+  .doctor-name span { font-size: 30px; line-height: 30px; font-weight: 500; margin-right: 16px; }
+  .doctor-bio { padding-left: 64px; }
+  .doctor-bio h3 { font-size: 26px; line-height: 26px; font-weight: 600; margin: 0 0 10px; }
+  .doctor-bio li { font-size: 20px; line-height: 30px; font-weight: 500; }
+  .doctor-bio > div { margin-bottom: 60px; }
+  .doctor-tags li { font-size: 12px; line-height: 12px; font-weight: 500; }
+  .doctor-honorary .doctor-content h2 { margin-bottom: 14px; }
+  .doctor-note { font-size: 30px; line-height: 30px; font-weight: 400; margin: 0 0 40px; }
+  .brand-visit-details { padding: 0; grid-template-columns: 240px 341px; grid-template-rows: 196px 230px; column-gap: 60px; row-gap: 60px; place-content: center; }
+  .brand-visit-details h2 { font-size: 30px; line-height: 30px; font-weight: 700; margin-bottom: 20px; }
+  .brand-visit-details a, .brand-visit-details p { font-size: 26px; line-height: 26px; font-weight: 600; }
+  .brand-visit-details > div:nth-child(2) > p { white-space: nowrap; }
+  .brand-visit-details > div:nth-child(3) p { font-size: 20px; line-height: 26px; font-weight: 400; }
+  .brand-visit-details ul { width: 380px; margin-top: 16px; }
+  .brand-visit-details li { font-size: 20px; line-height: 26px; font-weight: 400; color: #262d3c; }
+  .brand-visit-details li + li { margin-top: 0; }
+  .brand-visit-details dl > div { gap: 25px; font-size: 20px; line-height: 24px; margin-bottom: 6.59px; }
+  .brand-visit-details dt { width: 73px; min-width: 73px; font-weight: 600; }
+  .brand-visit-details dd { font-variant-numeric: tabular-nums; }
+  .brand-visit-details small { font-size: 18px; line-height: 24px; }
+  .brand-visit + .closing .closing-content h2 { font-size: 40px; line-height: 48px; }
+  .brand-visit + .closing .closing-content p { font-size: 18px; line-height: 26px; font-weight: 400; }
+}

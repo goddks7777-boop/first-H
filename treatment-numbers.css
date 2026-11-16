@@ -1,0 +1,54 @@
+.treatment-grid article > div {
+  padding: 40px 10.92% 0 11.21%;
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+}
+
+.treatment-grid article > div .treatment-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  opacity: .1;
+  pointer-events: none;
+}
+
+.treatment-grid article > div .treatment-number > span {
+  position: absolute;
+  top: -6px;
+  left: -24px;
+  font: 700 83.8235px/84px 'Cormorant SC', Georgia, serif;
+  letter-spacing: -.1em;
+  color: #262d3c;
+  white-space: nowrap;
+}
+
+.treatment-grid h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #424c61;
+}
+
+.treatment-grid p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #444;
+  word-break: keep-all;
+}
+
+@media (max-width: 1050px) {
+  .treatment-grid h3 { font-size: 16px; line-height: 1.25; }
+  .treatment-grid p { font-size: 13px; line-height: 1.45; }
+}
+
+@media (max-width: 650px) {
+  .treatment-grid article > div { padding: 25px 0 0 30px; }
+  .treatment-grid article > div .treatment-number { width: 54px; height: 54px; }
+  .treatment-grid article > div .treatment-number > span { top: -5px; left: -19px; font-size: 65px; line-height: 65px; }
+  .treatment-grid h3 { font-size: 15px; }
+  .treatment-grid p { font-size: 12px; }
+}

@@ -1,0 +1,21 @@
+:is(.pain-faq, .herbal-faq) .faq-list details { padding: 0; cursor: pointer; }
+:is(.pain-faq, .herbal-faq) .faq-list summary { padding: 24px 45px 24px 0; }
+:is(.pain-faq, .herbal-faq) .faq-list summary::after {
+  content: '';
+  width: 10.23px;
+  height: 10.23px;
+  right: 5px;
+  top: 50%;
+  border-right: 2px solid #424c61;
+  border-bottom: 2px solid #424c61;
+  box-sizing: border-box;
+  transform: translateY(-70%) scaleY(1) rotate(45deg);
+  transition: transform 250ms ease;
+}
+:is(.pain-faq, .herbal-faq) .faq-list details[open] summary::after { transform: translateY(-30%) scaleY(-1) rotate(45deg); }
+@media (max-width: 650px) {
+  :is(.pain-faq, .herbal-faq) .faq-list summary { padding-top: 18px; padding-bottom: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.pain-faq, .herbal-faq) .faq-list summary::after { transition: none; }
+}

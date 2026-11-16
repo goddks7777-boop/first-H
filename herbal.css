@@ -1,0 +1,54 @@
+.herbal-hero{height:1100px;position:relative;overflow:hidden;color:var(--navy)}
+.herbal-hero-photo{position:absolute;inset:0;background:url('assets/herbal/vis3.jpg') center/cover no-repeat}
+.herbal-hero-copy{position:relative;padding-top:405px}
+.herbal-hero h1{font-size:40px;line-height:1.35;letter-spacing:-.055em;margin:0 0 80px}
+.herbal-hero-copy p{font-size:26px;line-height:1.45;font-weight:500;margin:0}
+.herbal-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:100px;height:100px;border:1px solid #262d3c70;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;text-align:center}
+.herbal-scroll span{font:600 10px/1.2 var(--serif);max-width:70px}.herbal-scroll b{font-size:28px;line-height:1;font-weight:400}
+.herbal-principles{background:#dedede;padding:190px 0 200px;min-height:1230px;overflow:hidden}
+.herbal-principles h2,.personal-herbs h2,.antler h2,.gongjindan-hero h2,.herbal-faq h2{font-size:50px;line-height:1.2;letter-spacing:-.05em;margin:0}
+.herbal-principles h2{margin-bottom:180px}
+.principle-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.principle-grid article{min-width:0}.principle-grid img{width:100%;aspect-ratio:348/380;object-fit:cover}
+.principle-grid article>div,.antler-grid article>div{position:relative;padding:25px 4px 0 35px}
+.principle-grid span,.antler-grid span{position:absolute;left:0;top:5px;font:600 70px var(--serif);color:#a9acb255}
+.principle-grid h3,.antler-grid h3{position:relative;font-size:21px;line-height:1.35;margin:0 0 10px}
+.principle-grid p,.antler-grid p{position:relative;font-size:17px;line-height:1.5;margin:0;color:var(--body)}
+.personal-herbs{background:#2c313b url('assets/herbal/section2.jpg') center/cover no-repeat;color:#fff;padding:190px 0 175px;min-height:1556px}
+.personal-herbs h2{margin-bottom:100px;color:#fff}
+.personal-grid{display:grid;grid-template-columns:647px 1fr;gap:200px;align-items:start}
+.personal-grid>img{width:647px;height:827px;object-fit:cover}
+.personal-copy h3{font-size:37px;line-height:1.35;margin:0 0 30px;color:var(--cream)}
+.personal-copy>p{font-size:22px;line-height:1.55;margin:0 0 55px}
+.personal-copy ul{list-style:none;padding:0;margin:0}
+.personal-copy li{display:grid;grid-template-columns:50px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid #ffffff8f}
+.personal-copy li:first-child{border-top:1px solid #ffffff8f}
+.personal-copy .check{width:26px;height:26px;border:2px solid #fff;border-radius:3px;display:grid;place-items:center;font-size:19px;line-height:1}
+.personal-copy h4{font-size:22px;margin:0 0 12px;color:#fff}.personal-copy li p{font-size:17px;line-height:1.5;margin:0}
+.antler{background:#f1ede7 url('assets/herbal/section3.jpg') center/cover no-repeat;padding:190px 0 180px;min-height:1353px}
+.antler h2{margin-bottom:185px}.antler-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.antler-grid img{width:100%;aspect-ratio:469/503;object-fit:cover}
+.gongjindan-hero{height:770px;background:#2b2623 url('assets/herbal/section4.jpg') center/cover no-repeat;color:#fff;padding:140px 0}
+.gongjindan-hero h2{color:#fff;margin-bottom:75px}.gongjindan-hero .container>p:last-child{font-size:23px;line-height:1.5;margin:0}
+.gongjindan-benefits{background:var(--navy);color:var(--cream);padding:190px 0 200px}
+.gongjindan-benefits h2,.gongjindan-checks h2{font-size:38px;line-height:1.3;margin:0 0 35px}
+.benefit-intro,.checks-intro{font-size:23px;line-height:1.55;margin:0 0 85px}
+.benefit-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.benefit-grid article{background:#fff;color:var(--navy);min-height:375px;padding:28px 18px 24px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.benefit-grid article>span{position:absolute;left:5px;top:-6px;font:600 90px var(--serif);color:#262d3c15;line-height:1}
+.benefit-grid h3{position:relative;font-size:26px;line-height:1.3;margin:100px 0 22px}
+.benefit-grid p{font-size:17px;line-height:1.45;margin:0 0 22px}.benefit-grid article>div{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}.benefit-grid small{font-size:10px;border:1px solid #a8afbb;border-radius:20px;padding:2px 7px}
+.gongjindan-checks{background:var(--slate);color:var(--cream);padding:190px 0 200px}
+.checks-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.checks-grid article{min-height:205px;background:#eee9e1;color:var(--navy);padding:30px 35px;position:relative;overflow:hidden}
+.checks-grid article>span{position:absolute;top:-6px;left:5px;font:600 82px var(--serif);color:#262d3c17;line-height:1}
+.checks-grid h3{position:relative;font-size:21px;margin:0 0 24px;padding-left:25px}.checks-grid p{position:relative;font-size:16px;line-height:1.5;margin:0}
+.herbal-faq{background:#eee9e1;padding:170px 0 190px}.herbal-faq h2{margin-bottom:170px}
+.herbal-faq .faq-list{max-width:1200px;margin:0 auto}.herbal-faq details{border-bottom:1px solid #8290a0;padding:24px 0}
+.herbal-faq summary{display:block;list-style:none;cursor:pointer;position:relative;padding-right:45px;font-size:26px;line-height:1.4;font-weight:700;color:var(--slate)}
+.herbal-faq summary::-webkit-details-marker{display:none}.herbal-faq summary:after{content:'⌄';position:absolute;right:5px;top:0;font-size:26px;font-weight:400;transition:transform .2s}
+.herbal-faq details[open] summary:after{transform:rotate(180deg)}.herbal-faq details p{max-width:970px;margin:26px 50px 18px;font-size:21px;line-height:1.6;color:var(--body)}.herbal-faq details p a{text-decoration:underline}
+.herbal-closing{height:570px}
+@media(max-width:1450px){.personal-grid{grid-template-columns:45% 1fr;gap:8%}.personal-grid>img{width:100%;height:auto;aspect-ratio:647/827}.benefit-grid h3{font-size:21px}.benefit-grid p{font-size:14px}.benefit-grid article{padding:22px 12px;min-height:340px}}
+@media(max-width:1050px){.herbal-hero{height:760px}.herbal-hero-photo{background-position:55% center}.herbal-hero-copy{padding-top:245px}.herbal-hero h1{font-size:32px;margin-bottom:45px}.herbal-hero-copy p{font-size:20px}.herbal-principles,.personal-herbs,.antler,.gongjindan-benefits,.gongjindan-checks,.herbal-faq{min-height:0;padding:100px 0}.herbal-principles h2,.personal-herbs h2,.antler h2,.gongjindan-hero h2,.herbal-faq h2{font-size:35px}.herbal-principles h2,.antler h2{margin-bottom:80px}.principle-grid{gap:10px}.principle-grid h3,.antler-grid h3{font-size:16px}.principle-grid p,.antler-grid p{font-size:12px}.principle-grid span,.antler-grid span{font-size:48px}.principle-grid article>div,.antler-grid article>div{padding:15px 0 0 24px}.personal-herbs h2{margin-bottom:70px}.personal-grid{gap:5%}.personal-copy h3{font-size:25px}.personal-copy>p{font-size:15px;margin-bottom:25px}.personal-copy li{grid-template-columns:25px 1fr;gap:12px;padding:15px 0}.personal-copy .check{width:20px;height:20px;font-size:13px}.personal-copy h4{font-size:16px;margin-bottom:5px}.personal-copy li p{font-size:12px}.gongjindan-hero{height:530px;padding:90px 0;background-position:55% center}.gongjindan-hero h2{margin-bottom:45px}.gongjindan-hero .container>p:last-child{font-size:17px}.gongjindan-benefits h2,.gongjindan-checks h2{font-size:29px}.benefit-intro,.checks-intro{font-size:17px;margin-bottom:55px}.benefit-grid{grid-template-columns:repeat(3,1fr)}.benefit-grid article{min-height:270px}.benefit-grid h3{margin-top:65px}.checks-grid{grid-template-columns:repeat(2,1fr)}.herbal-faq h2{margin-bottom:90px}.herbal-faq summary{font-size:19px}.herbal-faq details p{font-size:15px}}
+@media(max-width:650px){.herbal-hero{height:760px}.herbal-hero-photo{background-position:58% center}.herbal-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#e6e3dfaa,transparent 80%);pointer-events:none}.herbal-hero-copy{z-index:1;padding-top:180px}.herbal-hero h1{font-size:24px;max-width:260px;margin-bottom:28px}.herbal-hero-copy p{font-size:15px;max-width:260px}.herbal-hero-copy p br{display:none}.herbal-scroll{width:70px;height:70px;bottom:16px}.herbal-scroll span{font-size:7px;max-width:50px}.herbal-scroll b{font-size:20px}.herbal-principles,.personal-herbs,.antler,.gongjindan-benefits,.gongjindan-checks,.herbal-faq{padding:70px 0}.herbal-principles h2,.personal-herbs h2,.antler h2,.gongjindan-hero h2,.herbal-faq h2{font-size:27px}.herbal-principles h2,.antler h2{margin-bottom:55px}.principle-grid{grid-template-columns:repeat(2,1fr);gap:30px 10px}.principle-grid h3,.antler-grid h3{font-size:15px}.principle-grid p,.antler-grid p{font-size:11px}.personal-herbs h2{margin-bottom:50px}.personal-grid{grid-template-columns:1fr;gap:35px}.personal-grid>img{width:100%;aspect-ratio:647/600}.personal-copy h3{font-size:24px}.personal-copy>p{font-size:14px}.personal-copy li p{font-size:12px}.antler-grid{grid-template-columns:1fr;gap:40px}.antler-grid img{aspect-ratio:469/400}.antler-grid article>div{padding-left:35px}.antler-grid h3{font-size:19px}.antler-grid p{font-size:14px}.gongjindan-hero{height:470px;padding:75px 0;background-position:59% center}.gongjindan-hero h2{max-width:260px;font-size:24px;margin-bottom:35px}.gongjindan-hero .container>p:last-child{font-size:13px;max-width:245px}.gongjindan-benefits h2,.gongjindan-checks h2{font-size:24px}.benefit-intro,.checks-intro{font-size:14px;margin-bottom:40px}.benefit-intro br,.checks-intro br{display:none}.benefit-grid{grid-template-columns:repeat(2,1fr);gap:8px}.benefit-grid article{min-height:250px;padding:18px 12px}.benefit-grid article>span{font-size:65px}.benefit-grid h3{font-size:16px;margin:60px 0 12px}.benefit-grid p{font-size:11px}.benefit-grid small{font-size:8px}.checks-grid{grid-template-columns:1fr;gap:8px}.checks-grid article{min-height:150px;padding:25px}.checks-grid h3{font-size:17px;margin-bottom:15px}.checks-grid p{font-size:13px}.herbal-faq h2{margin-bottom:60px}.herbal-faq details{padding:18px 0}.herbal-faq summary{font-size:15px}.herbal-faq details p{font-size:13px;margin:18px 15px 5px}.herbal-closing{height:420px}}

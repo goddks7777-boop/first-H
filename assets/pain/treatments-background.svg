@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 2002" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f3f0ec"/><stop offset=".52" stop-color="#e9e6e1"/><stop offset="1" stop-color="#f1eeea"/>
+    </linearGradient>
+    <linearGradient id="fold" x1=".18" y1=".12" x2=".94" y2=".7">
+      <stop stop-color="#f7f5f1"/><stop offset=".63" stop-color="#f0eeeb"/><stop offset=".93" stop-color="#e5e2dd"/><stop offset="1" stop-color="#d3d0cb"/>
+    </linearGradient>
+    <linearGradient id="paper" x1=".15" y1=".1" x2=".92" y2=".8">
+      <stop stop-color="#f7f5f2"/><stop offset=".7" stop-color="#f2f0ed"/><stop offset="1" stop-color="#e9e6e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-15%" width="150%" height="135%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="soft" x="-20%" y="-10%" width="140%" height="120%"><feGaussianBlur stdDeviation="55"/></filter>
+  </defs>
+  <rect width="1920" height="2002" fill="url(#base)"/>
+  <path d="M590 -160 C990 180 1490 510 1515 1060 C1530 1390 1400 1760 1290 2150 L1570 2150 C1560 1730 1620 1240 1645 770 C1670 390 1600 70 1515 -160Z" fill="#d4d1cc" opacity=".32" filter="url(#soft)"/>
+  <path d="M490 -150 C850 145 1335 485 1405 910 C1464 1275 1310 1640 1115 1870 C980 2025 740 2130 370 2160 L1475 2160 C1460 1800 1503 1440 1558 1050 C1620 610 1620 180 1490 -150Z" fill="url(#fold)"/>
+  <path d="M498 -150 C845 150 1320 495 1390 910 C1450 1275 1308 1638 1110 1870 C1000 2000 770 2110 390 2140" fill="none" stroke="#a9a39d" stroke-width="20" opacity=".21" filter="url(#shadow)"/>
+  <path d="M500 -150 C850 150 1325 495 1395 910 C1453 1275 1305 1645 1110 1870 C965 2040 718 2110 370 2140 C303 2115 305 1910 315 1700 L325 380 C327 155 350 -40 370 -150Z" fill="url(#paper)"/>
+  <path d="M500 -150 C850 150 1325 495 1395 910 C1453 1275 1305 1645 1110 1870" fill="none" stroke="#fff" stroke-opacity=".72" stroke-width="2"/>
+  <path d="M1388 915 C1443 1260 1312 1640 1110 1870" fill="none" stroke="#aaa49c" stroke-opacity=".16" stroke-width="2"/>
+</svg>

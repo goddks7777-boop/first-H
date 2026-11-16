@@ -1,0 +1,43 @@
+/* Use the beauty page header as the shared navigation design. */
+.site-header:not(.scrolled) { font-family: Pretendard, 'Malgun Gothic', sans-serif; }
+@media (min-width: 1051px) {
+  .quick-links { right: 32px; }
+}
+@media (min-width: 1051px) {
+  .site-header:not(.scrolled) .brand { font-size: 26px; font-weight: 700; line-height: 1; }
+  .site-header:not(.scrolled) .primary-nav a { font-size: 17px; font-weight: 600; line-height: 1.65; }
+  .site-header:not(.scrolled) .language { font-size: 16px; font-weight: 600; line-height: 1.65; }
+}
+@media (min-width: 1451px) {
+  .site-header:not(.scrolled) .brand { font-size: 30px; font-weight: 600; }
+  .site-header:not(.scrolled) .primary-nav { gap: 67px; transform: translateY(-10px); }
+  .site-header:not(.scrolled) .header-tools { gap: 50px; margin-left: 139px; transform: translateY(-10px); }
+  .site-header:not(.scrolled) .language { font-size: 18px; }
+}
+
+/* Mobile quick menu follows the fixed bottom-bar layout used by Trini. */
+@media (max-width: 767px) {
+  body { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
+  .quick-links {
+    position: fixed; z-index: 35; inset: auto 0 0; width: 100%;
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0;
+    height: calc(78px + env(safe-area-inset-bottom, 0px));
+    padding: 8px 5px calc(7px + env(safe-area-inset-bottom, 0px));
+    background: #fff; border-top: 1px solid #dedbd7;
+    box-shadow: 0 -3px 12px rgba(38, 45, 60, .06);
+  }
+  .quick-links a, .quick-links .quick-top {
+    width: auto; height: auto; min-width: 0; border-radius: 0; box-shadow: none;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 5px; background: transparent; color: #262d3c; text-decoration: none;
+    transform: none;
+  }
+  .quick-links a:hover, .quick-links a:active { background: #f4f2ee; transform: none; }
+  .quick-links a img { width: 30px; height: 30px; object-fit: contain; filter: brightness(0) saturate(100%) invert(14%) sepia(17%) saturate(1024%) hue-rotate(184deg) brightness(93%); }
+  .quick-links a span { display: block; font-size: clamp(9px, 2.5vw, 11px); line-height: 1.15; font-weight: 500; white-space: nowrap; }
+  .site-header.menu-open ~ .quick-links { visibility: hidden; pointer-events: none; }
+}
+
+@media (max-width: 650px) {
+  .footer-links span { font-size: 13px; }
+}

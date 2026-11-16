@@ -1,0 +1,132 @@
+@font-face {
+  font-family: Pretendard;
+  src: url('assets/fonts/PretendardVariable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 45 920;
+  font-display: swap;
+}
+
+.beauty-header,
+.beauty-hero-copy {
+  font-family: Pretendard, var(--sans);
+}
+
+.beauty-hero h1 {
+  letter-spacing: -.01em;
+}
+
+.beauty-split-heading.beauty-split-heading {
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.beauty-split-heading > span { display: block; }
+.beauty-split-heading > span:first-child { font-weight: 700; }
+.beauty-split-heading > span:last-child { font-weight: 500; }
+.line-care-intro { font-family: Pretendard, 'Malgun Gothic', sans-serif; }
+.line-care-intro ol li span { font-family: Pretendard, 'Malgun Gothic', sans-serif; font-style: normal; font-weight: 700; }
+.line-care-grid article > div .line-care-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  opacity: .1;
+  pointer-events: none;
+}
+.line-care-grid article > div .line-care-number > span {
+  position: absolute;
+  left: -24px;
+  top: -6px;
+  color: #262d3c;
+  font: 700 83.8235px/84px 'Cormorant SC', Georgia, serif;
+  letter-spacing: -.1em;
+  white-space: nowrap;
+}
+@media (min-width: 1051px) {
+  .line-care-grid article > div { padding: 40px 8.32% 0; font-family: Pretendard, 'Malgun Gothic', sans-serif; }
+  .line-care-grid h3 { margin: 0 0 10px; font-size: 20px; line-height: 20px; font-weight: 700; color: #424c61; }
+  .line-care-grid p { font-size: 18px; line-height: 26px; font-weight: 500; }
+}
+@media (max-width: 650px) {
+  .line-care-grid article > div .line-care-number { width: 54px; height: 54px; }
+  .line-care-grid article > div .line-care-number > span { left: -19px; top: -5px; font-size: 65px; line-height: 65px; }
+}
+@media (min-width: 1451px) {
+  .beauty-split-heading.beauty-split-heading { font-size: 50px; line-height: 60px; }
+  .line-care-intro { grid-template-columns: minmax(0, 646px) minmax(0, 469px); justify-content: space-between; gap: 0; }
+  .line-care-intro h3 { margin: 0 0 40px; font-size: 40px; line-height: 40px; font-weight: 600; letter-spacing: 0; }
+  .line-care-intro p { max-width: 591px; font-size: 26px; line-height: 36px; font-weight: 500; word-break: break-all; }
+  .line-care-intro ol { width: 100%; }
+  .line-care-intro li { display: grid; grid-template-columns: 22.39% 1fr; gap: 0; align-items: start; min-height: 46px; margin: 0 0 16px; padding: 6px 0 0; border-bottom: 1px solid #424c61; color: #424c61; font-size: 20px; line-height: 20px; font-weight: 500; }
+  .line-care-intro li:last-child { margin-bottom: 0; }
+  .line-care-intro ol li span { font-size: 14px; line-height: 14px; font-weight: 700; }
+}
+
+@media (min-width: 1451px) {
+  .beauty-header .brand { font-size: 30px; font-weight: 600; }
+  .beauty-header .primary-nav { gap: 67px; }
+  .beauty-header .header-tools { margin-left: 139px; }
+  .beauty-header .language { font-size: 18px; }
+}
+.line-care-note {
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #808080;
+}
+
+.herbal-more {
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: #424c61;
+}
+
+.herbal-more span {
+  font-size: inherit;
+  margin-left: 0;
+}
+
+.beauty-faq .faq-list details {
+  padding: 0;
+  cursor: pointer;
+}
+
+.beauty-faq .faq-list summary {
+  padding: 24px 45px 24px 0;
+}
+
+.beauty-faq .faq-list summary::after {
+  content: '';
+  width: 10.23px;
+  height: 10.23px;
+  right: 5px;
+  top: 50%;
+  border-right: 2px solid #424c61;
+  border-bottom: 2px solid #424c61;
+  box-sizing: border-box;
+  transform: translateY(-70%) scaleY(1) rotate(45deg);
+  transition: transform 250ms ease;
+}
+
+.beauty-faq .faq-list details[open] summary::after {
+  transform: translateY(-30%) scaleY(-1) rotate(45deg);
+}
+
+@media (max-width: 650px) {
+  .beauty-faq .faq-list summary { padding-top: 18px; padding-bottom: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beauty-faq .faq-list summary::after { transition: none; }
+}
+

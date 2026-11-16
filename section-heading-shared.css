@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Pretendard;
+  src: url('assets/fonts/PretendardVariable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 45 920;
+  font-display: swap;
+}
+
+.shared-split-heading.shared-split-heading {
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.shared-split-heading > span { display: block; }
+.shared-split-heading > span:first-child { font-weight: 700; }
+.shared-split-heading > span:last-child { font-weight: 500; }
+
+@media (max-width: 1450px) {
+  .shared-split-heading.shared-split-heading { font-size: 42px; line-height: 1.2; }
+}
+@media (max-width: 1050px) {
+  .shared-split-heading.shared-split-heading { font-size: 35px; }
+}
+@media (max-width: 650px) {
+  .shared-split-heading.shared-split-heading { font-size: 27px; }
+}

@@ -1,0 +1,5 @@
+.large-typography { display: flex; align-items: flex-end; }
+.large-typography-track { position: relative; top: .18em; display: flex; width: max-content; line-height: 1; animation: typography-flow 35s linear infinite; }
+.large-typography-track span { flex: none; padding-right: .5em; }
+@keyframes typography-flow { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .large-typography-track { animation: none; } }

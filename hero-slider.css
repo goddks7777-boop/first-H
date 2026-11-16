@@ -1,0 +1,184 @@
+.hero-carousel .hero-viewport {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.hero-carousel .hero-viewport.is-dragging { cursor: grabbing; }
+.hero-carousel .hero-viewport:focus-visible { outline: 3px solid #bf9c6c; outline-offset: -5px; }
+
+.hero-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform .65s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+
+.hero-track.is-jumping,
+.hero-viewport.is-dragging .hero-track { transition: none; }
+
+.hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,rgba(230,228,224,.24),transparent 55%);
+  pointer-events: none;
+}
+
+.hero-carousel .hero-copy { z-index: 1; pointer-events: none; }
+.hero-carousel .hero-copy h2 {
+  margin: 0;
+  font-size: clamp(30px,2.1vw,40px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -.055em;
+}
+
+.hero-slider-controls { position: absolute; z-index: 7; inset: 0; pointer-events: none; }
+.hero-slide-arrow {
+  position: absolute;
+  top: 48%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #fff9;
+  border-radius: 50%;
+  background: #262d3c94;
+  color: #fff;
+  font: 30px/1 Arial,sans-serif;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background .2s,transform .2s;
+}
+.hero-slide-arrow:hover { background: #262d3c; transform: translateY(-50%) scale(1.06); }
+.hero-slide-arrow:focus-visible,.hero-slide-dots button:focus-visible { outline: 3px solid #bf9c6c; outline-offset: 4px; }
+.hero-slide-prev { left: max(28px,calc((100vw - 1840px)/2)); }
+.hero-slide-next { right: max(28px,calc((100vw - 1840px)/2)); }
+
+.hero-slide-dots { position: absolute; z-index: 7; bottom: 210px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; }
+.hero-slide-dots button { width: 10px; height: 10px; padding: 0; border: 1px solid #fff; border-radius: 50%; background: #262d3c80; cursor: pointer; }
+.hero-slide-dots button[aria-current="true"] { width: 30px; border-radius: 10px; background: #fff; }
+.hero-slide-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+
+@media (max-width: 1050px) {
+  .hero-carousel .hero-copy h2 { font-size: 29px; }
+  .hero-slide-arrow { width: 44px; height: 44px; font-size: 24px; top: 45%; }
+  .hero-slide-prev { left: 12px; }
+  .hero-slide-next { right: 12px; }
+  .hero-slide-dots { bottom: 180px; }
+}
+
+@media (max-width: 650px) {
+  .hero-slide-photo { object-position: 62% center; }
+  .hero-slide::after { background: linear-gradient(90deg,#e6e3dfab,transparent 85%); }
+  .hero-carousel .hero-copy { padding-top: 300px; }
+  .hero-carousel .hero-copy h2 { font-size: 22px; max-width: 320px; line-height: 1.45; }
+  .hero-carousel .hero-copy h2 br { display: none; }
+  .hero-carousel .hero-copy p { max-width: 260px; }
+  .hero-slide-arrow { top: 52%; width: 38px; height: 38px; font-size: 21px; }
+  .hero-slide-prev { left: 6px; }
+  .hero-slide-next { right: 6px; }
+  .hero-slide-dots { bottom: 255px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-track,.hero-slide-arrow { transition: none; }
+}
+
+/* The three clinic links occupy the full width and height of the visual panel. */
+.hero-carousel { --clinic-panel-height: 356px; }
+@media (min-width: 1051px) {
+  .hero-carousel { height: min(57.3vw, 1100px); }
+  .hero-carousel .hero-slide-photo { object-position: center top; }
+  .hero-carousel .hero-clinics { top: min(38.75vw, 744px); bottom: auto; }
+}
+.hero-carousel .hero-clinics {
+  height: var(--clinic-panel-height);
+  background: none;
+  backdrop-filter: none;
+}
+.hero-carousel .clinic-links {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  gap: 0;
+}
+.hero-carousel .clinic-links a {
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 18px 38px 6.2vw;
+  transition: background .2s;
+}
+.hero-carousel .clinic-links a:nth-child(1) { background: rgba(66,76,97,.2); }
+.hero-carousel .clinic-links a:nth-child(2) { background: rgba(66,76,97,.4); padding-left: 5.05vw; }
+.hero-carousel .clinic-links a:nth-child(3) { background: rgba(66,76,97,.6); padding-left: 6.25vw; }
+.hero-carousel .clinic-links a:hover { background: rgba(66,76,97,.7); }
+.hero-carousel .clinic-links a:hover strong { text-decoration: none; }
+.hero-carousel .clinic-links strong {
+  font-family: Pretendard,var(--sans);
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+.hero-carousel .clinic-links small {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.hero-carousel .hero-slide-dots { bottom: calc(var(--clinic-panel-height) + 24px); }
+
+@media (max-width: 1050px) {
+  .hero-carousel { --clinic-panel-height: 220px; }
+  .hero-carousel .clinic-links a,
+  .hero-carousel .clinic-links a:nth-child(2),
+  .hero-carousel .clinic-links a:nth-child(3) { padding: 0 14px 24px; }
+  .hero-carousel .clinic-links strong { font-size: clamp(19px,2.5vw,28px); line-height: 1.2; white-space: normal; }
+  .hero-carousel .clinic-links small { font-size: 10px; line-height: 1.2; }
+}
+
+@media (max-width: 650px) {
+  .hero-carousel { --clinic-panel-height: 240px; }
+  .hero-carousel .clinic-links { grid-template-columns: 1fr; }
+  .hero-carousel .clinic-links a,
+  .hero-carousel .clinic-links a:nth-child(2),
+  .hero-carousel .clinic-links a:nth-child(3) {
+    height: 80px;
+    padding: 0 20px;
+    border-bottom: 1px solid #fff3;
+  }
+  .hero-carousel .clinic-links a:last-child { border-bottom: 0; }
+  .hero-carousel .clinic-links strong { font-size: 19px; line-height: 1.15; }
+  .hero-carousel .clinic-links small { margin-top: 4px; font-size: 9px; }
+}

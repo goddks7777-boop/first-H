@@ -1,0 +1,20 @@
+@media (prefers-reduced-motion: no-preference) {
+  .aos-enter { opacity: 0; transform: translateY(32px); transition: opacity .75s ease, transform .75s cubic-bezier(.22,.61,.36,1); }
+  .aos-enter.aos-visible { opacity: 1; transform: translateY(0); }
+  .skin-points > div.aos-enter.aos-visible:nth-child(2) { transition-delay: .25s; }
+  .skin-points > div.aos-enter.aos-visible:nth-child(3) { transition-delay: .5s; }
+  .rehab-grid li.aos-enter:nth-child(2) { transition-delay: .25s; }
+  .rehab-grid li.aos-enter:nth-child(3) { transition-delay: .5s; }
+  @media (min-width: 651px) {
+    .steps-grid article.aos-enter:nth-child(2) { transition-delay: .3s; }
+    .steps-grid article.aos-enter:nth-child(3) { transition-delay: .6s; }
+  }
+  @media (min-width: 1051px) {
+    .thread-steps article.aos-enter:nth-child(2) { transition-delay: .25s; }
+    .thread-steps article.aos-enter:nth-child(3) { transition-delay: .5s; }
+    .thread-steps article.aos-enter:nth-child(4) { transition-delay: .75s; }
+  }
+  @media (max-width: 1050px) {
+    .thread-steps article.aos-enter:nth-child(even) { transition-delay: .25s; }
+  }
+}

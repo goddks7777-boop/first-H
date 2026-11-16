@@ -1,0 +1,130 @@
+.sports-body { align-items: start; }
+
+.sports-scroll {
+  display: flex;
+  width: calc(100vw - max(40px, (100vw - 1440px) / 2) - 610px);
+  max-width: none;
+  overflow: hidden;
+  scroll-snap-type: none;
+}
+
+.sports-scroll article {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 413px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex-grow 500ms cubic-bezier(.22, 1, .36, 1), flex-basis 500ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.sports-scroll article:hover,
+.sports-scroll article:focus-visible {
+  flex-grow: 2.4;
+}
+
+.sports-scroll article > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.8);
+}
+
+.sports-scroll article > .sports-photo {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.sports-scroll article:hover > .sports-photo,
+.sports-scroll article:focus-visible > .sports-photo { opacity: 1; }
+
+.sports-scroll article > div {
+  position: absolute;
+  inset: auto 0 0;
+  height: 100px;
+  padding: 31px 16px 20px 39px;
+  background: linear-gradient(180deg, rgba(255,255,255,.2), rgba(0,0,0,.6));
+  color: #fff;
+  font-family: Pretendard, 'Malgun Gothic', sans-serif;
+  transition: height 400ms ease;
+}
+
+.sports-scroll article:hover > div,
+.sports-scroll article:focus-visible > div { height: 211px; }
+
+.sports-scroll article span {
+  position: absolute;
+  top: 9px;
+  left: -24px;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  font: 700 83.8235px/84px 'Cormorant SC', Georgia, serif;
+  letter-spacing: -.1em;
+  color: rgba(255,255,255,.2);
+}
+
+.sports-scroll article h4 {
+  position: relative;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sports-scroll article p {
+  position: absolute;
+  top: 96px;
+  left: 39px;
+  right: 16px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  word-break: keep-all;
+}
+
+.sports-scroll article:hover p,
+.sports-scroll article:focus-visible p { opacity: 1; transition-delay: 120ms; }
+
+.sports-scroll article:focus-visible { outline: 2px solid white; outline-offset: -2px; }
+
+@media (max-width: 1050px) {
+  .sports-scroll { width: 100%; }
+  .sports-scroll article h4 { font-size: clamp(15px, 2.2vw, 24px); }
+}
+
+@media (max-width: 650px) {
+  .sports-scroll { overflow-x: auto; }
+  .sports-scroll article { flex: 0 0 110px; height: 330px; }
+  .sports-scroll article:hover,
+  .sports-scroll article:focus-visible { flex-basis: 220px; }
+  .sports-scroll article > div { padding-left: 28px; }
+  .sports-scroll article p { left: 28px; }
+  .sports-scroll article h4 { font-size: 16px; }
+  .sports-scroll article p { font-size: 14px; }
+}
+
+@media (max-width: 767px) {
+  .sports-scroll { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; overflow: visible; }
+  .sports-scroll article,
+  .sports-scroll article:hover,
+  .sports-scroll article:focus-visible { height: clamp(180px, 56vw, 240px); min-width: 0; }
+  .sports-scroll article > div { height: 80px; padding: 27px 7px 10px 12px; }
+  .sports-scroll article:hover > div,
+  .sports-scroll article:focus-visible > div { height: 145px; }
+  .sports-scroll article span { left: -18px; top: 6px; font-size: 60px; line-height: 60px; }
+  .sports-scroll article h4 { font-size: clamp(12px, 3vw, 16px); line-height: 1.15; white-space: normal; word-break: keep-all; }
+  .sports-scroll article p { top: 74px; left: 12px; right: 7px; font-size: 11px; line-height: 1.35; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sports-scroll article,
+  .sports-scroll article > .sports-photo,
+  .sports-scroll article > div,
+  .sports-scroll article p { transition: none; }
+}
