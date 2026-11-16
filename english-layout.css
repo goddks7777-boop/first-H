@@ -6,3 +6,15 @@ html[lang="en"] .after-accident-cards article > div { top: auto; min-height: 51.
   html[lang="en"] .after-accident-cards h3 { font-size: 13px; line-height: 1.2; margin-bottom: 7px; }
   html[lang="en"] .after-accident-cards p { font-size: 11px; line-height: 1.3; }
 }
+
+/* Grow the English content rows when text wraps on narrower screens. */
+@media (min-width: 651px) {
+  html[lang="en"] .gallery-grid { grid-template-rows: minmax(200px, auto) 200px 200px; }
+  html[lang="en"] .herbal-grid { grid-template-rows: repeat(2, minmax(331px, auto)); }
+  html[lang="en"] .herbal-grid > img { height: 100%; }
+}
+@media (min-width: 651px) and (max-width: 1050px) {
+  html[lang="en"] .gallery-grid { grid-template-rows: minmax(180px, auto) 180px 180px; }
+  html[lang="en"] .herbal-grid { grid-template-rows: repeat(2, minmax(250px, auto)); }
+}
+@media (min-width: 651px) { html[lang="en"] .herbal-grid > .herbal-copy { min-height: max-content; } }
