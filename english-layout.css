@@ -1,0 +1,8 @@
+/* Give English copy room in compact cards. */
+html[lang="en"] .doctor-tags li { white-space: normal; max-width: 100%; line-height: 1.35; overflow-wrap: anywhere; }
+html[lang="en"] .after-accident-cards article > div { top: auto; min-height: 51.09%; height: auto; padding-top: 24px; }
+@media (max-width: 767px) {
+  html[lang="en"] .after-accident-cards article > div { padding: 12px 10px 14px; }
+  html[lang="en"] .after-accident-cards h3 { font-size: 13px; line-height: 1.2; margin-bottom: 7px; }
+  html[lang="en"] .after-accident-cards p { font-size: 11px; line-height: 1.3; }
+}
