@@ -504,3 +504,8 @@ conditionCards.forEach(card => {
   card.addEventListener('click', activate);
 });
 
+
+// Disable native image and link dragging while keeping carousel pointer gestures.
+document.addEventListener("dragstart", event => {
+  if (event.target.closest("img, a")) event.preventDefault();
+});

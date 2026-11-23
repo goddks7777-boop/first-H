@@ -47,3 +47,8 @@
 .intro { position: relative; overflow: hidden; isolation: isolate; }
 .intro-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: -1; pointer-events: none; }
 .intro-inner { position: relative; z-index: 1; }
+
+/* Prevent selecting page content and dragging images or links. */
+body { -webkit-user-select: none; user-select: none; }
+input, textarea, select, [contenteditable="true"] { -webkit-user-select: text; user-select: text; }
+img, a { -webkit-user-drag: none; }
